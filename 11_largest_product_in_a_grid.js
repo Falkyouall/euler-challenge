@@ -102,13 +102,13 @@ const findMaxGridValue = (g = data) => {
   const {rows} = raster(grid)
   const parts = []
 
-  for(let i = 0; i < 17; i++) {
+  for(let i = 0; i < (rows.length-3); i++) {
     let row = rows[i]
     let row2 = rows[(i+1)]
     let row3 = rows[(i+2)]
     let row4 = rows[(i+3)]
 
-    for(let j = 0; j < row.length-3; j++) {
+    for(let j = 0; j < (row.length-3); j++) {
       const nums = [
         row[j], row[j+1], row[j+2], row[j+3],
         row2[j], row2[j+1], row2[j+2], row2[j+3],
@@ -121,6 +121,7 @@ const findMaxGridValue = (g = data) => {
   const numbers = parts.map(part => part.map(y => Number(y)))
   const highestNumbers = numbers.filter(part => part.every(val => val > 0))
   const maxPartValues = highestNumbers.reduce(productReducer)
+
   return Math.max(...maxPartValues)
 }
 
