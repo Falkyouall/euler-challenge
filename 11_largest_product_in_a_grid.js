@@ -74,9 +74,7 @@ const raster = grid => {
     rows.push(row)
     index += 20
   }
-  return {
-    rows: rows
-  }
+  return {rows}
 }
 
 const productReducer = (acc, tile) => {
@@ -127,3 +125,4 @@ const findMaxGridValue = (g = data) => {
 }
 
 console.log("Problem 11: ", findMaxGridValue())
+
