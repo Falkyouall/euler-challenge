@@ -21,8 +21,8 @@ const getPythagoreanProduct = () => {
   for(let a = 10; a <= sum/3; a++) {
     for(let b = a+1; b <= sum/2; b++) {
       let c = (sum - a - b)
-      if(((a*a)+(b*b)) === (c*c)) {
-        if(a+b+c === 1000) return (a*b*c)
+      if(((a * a)+(b * b)) === (c * c)) {
+        if(a + b + c === 1000) return (a * b * c)
       }
     }
   }

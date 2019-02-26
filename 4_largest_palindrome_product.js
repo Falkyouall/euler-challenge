@@ -1,3 +1,4 @@
+
 'use strict'
 
 /*
@@ -13,9 +14,9 @@ const biggestPalindrome = () => {
   const palindromes = []
   for(let i = 999; i>0; i--) {
     for(let j = 100; j<=999; j++) {
-      const result = j*i;
+      const result = j*i
       const arr = result.toString().split('')
-      const [a,b,c,d,e,f] = arr;
+      const [a,b,c,d,e,f] = arr
       if(a === f && b === e && c === d) {
         palindromes.push(result)
       } else continue
